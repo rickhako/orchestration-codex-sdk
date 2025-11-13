@@ -13,6 +13,19 @@ Codex SDK は OpenAI API を直接呼び出します。ChatGPT Plus の購読だ
 export OPENAI_API_KEY=sk-xxxx
 ```
 
+### .env で管理する場合
+1. `.env.example` をコピーして `.env` を作成
+   ```bash
+   cp .env.example .env
+   # 編集して実際のキーを設定
+   ```
+2. シェルに読み込んでからコマンドを実行
+   ```bash
+   set -a && source .env && set +a
+   npx tsx src/codex/orchestrator.ts
+   ```
+   `direnv` や `dotenv-cli` などお好みの方法で `.env` を読み込んでも構いません。
+
 ## セットアップ
 ```bash
 npm install
