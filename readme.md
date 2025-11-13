@@ -47,4 +47,4 @@ npx tsx src/codex/patchAgent.ts
 - PatchAgent の prompt にリポジトリ構造や命名規則を追記すると、より的確な diff を返してくれます。
 
 ## 参考文献
-- [OpenAI Codex SDK 公式ドキュメント](https://platform.openai.com/docs/guides/codex)
+- [OpenAI Codex SDK 公式ドキュメント](https://developers.openai.com/codex/sdk/)
