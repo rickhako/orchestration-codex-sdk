@@ -1,0 +1,13 @@
+{
+  "name": "orchestration-codex-sdk",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Codex SDK orchestration samples (orchestrator + patch agent + persona).",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@openai/codex-sdk": "^0.57.0"
+  }
+}
