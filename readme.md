@@ -7,11 +7,7 @@ Codex SDK (@openai/codex-sdk) を前提に、ローカルでマルチエージ�
 - `src/codex/patchAgent.ts`: 既存ファイルの内容＋ゴールから apply_patch 互換 diff を生成するヘルパー。
 
 ## なぜ OPENAI_API_KEY が必要か
-Codex SDK は OpenAI API を直接呼び出します。ChatGPT Plus の購読だけでは CLI／SDK が認証されないため、**OpenAI ダッシュボードで取得した API キー**を環境変数 `OPENAI_API_KEY` に設定する必要があります。
-
-```bash
-export OPENAI_API_KEY=sk-xxxx
-```
+Codex SDK は OpenAI API を直接呼び出します。ChatGPT Plus の購読だけでは CLI／SDK が認証されないため、**OpenAI ダッシュボードで取得した API キー**を環境変数 `OPENAI_API_KEY` に読み込ませる必要があります。このリポジトリでは `.env` ファイルで管理し、必要なときだけシェルに読み込む運用を推奨します。
 
 ### .env で管理する場合
 1. `.env.example` をコピーして `.env` を作成
@@ -24,6 +20,7 @@ export OPENAI_API_KEY=sk-xxxx
    set -a && source .env && set +a
    npx tsx src/codex/orchestrator.ts
    ```
+   こうしておけばキーは `.env` にだけ保存され、シェルにも一時的にしか展開されません。
    `direnv` や `dotenv-cli` などお好みの方法で `.env` を読み込んでも構いません。
 
 ## セットアップ
