@@ -45,3 +45,6 @@ npx tsx src/codex/patchAgent.ts
 - `AGENTS.md` をプロジェクト固有のルールに合わせて調整すれば、Codex CLI/SDK から一貫した振る舞いを引き出せます。
 - オーケストレーターの各スレッドに追加のコンテキスト（既存仕様、コード抜粋など）をコピーすることでより正確なプランを得られます。
 - PatchAgent の prompt にリポジトリ構造や命名規則を追記すると、より的確な diff を返してくれます。
+
+## 参考文献
+- [OpenAI Codex SDK 公式ドキュメント](https://platform.openai.com/docs/guides/codex)
